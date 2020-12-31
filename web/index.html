@@ -1,0 +1,242 @@
+<html>
+    <head>
+        <title>CrowdWorksのスクレイピング</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <div class="">
+            CSVファイル名<input id="csv_name" type="text" value="source.csv"></input><br/>
+            クラウドワークスカテゴリ<select name="カテゴリ", id="serch_word1">
+                <option class="title">システム開発</option>
+                    <option>Web開発・システム設計</option>
+                    <option>保守・運用・更新（プロ向け）</option>
+                    <option>アプリケーション開発</option>
+                <option class='title'>アプリ・スマートフォン開発</option>
+                    <option>iPhone・iPadアプリ開発</option>
+                    <option>Androidアプリ開発</option>
+                    <option>スマートフォン アプリ開発・サイト構築</option>
+                    <option>ソーシャルゲーム開発</option>
+                    <option>Androidゲーム開発</option>
+                    <option>iPhone・iPadゲーム開発</option>
+                    <option>Facebookアプリ開発</option>
+                    <option>携帯アプリ・モバイルアプリ開発</option>
+                <option class='title'>ハードウェア設計・開発</option>
+                    <option>回路設計・組み込みソフト開発</option>
+                    <option>ハードウェア機構設計</option>
+                <option class='title'>ホームページ制作・Webデザイン</option>
+                    <option>ホームページ作成</option>
+                    <option>ウェブデザイン</option>
+                    <option>WordPress制作・導入</option>
+                    <option>ランディングページ（LP）制作</option>
+                    <option>HTML・CSSコーディング</option>
+                    <option>SEO対策</option>
+                    <option>CMS導入</option>
+                    <option>UI設計・UIデザイン</option>
+                    <option>モバイルサイト・スマートフォンサイト制作</option>
+                    <option>SNSマーケティング</option>
+                    <option>リスティング広告</option>
+                    <option>アクセス解析</option>
+                    <option>インタラクションデザイン</option>
+                <option class='title'>デザイン</option>
+                    <option>ロゴ・バナー・イラスト</option>
+                    <option>印刷物・DTPデザイン</option>
+                    <option>キャラクター・アイコン・アニメ</option>
+                    <option>地図・看板・インフォグラフィック</option>
+                    <option>POP・メニュー・シール</option>
+                    <option>CD・本</option>
+                    <option>プロダクトデザイン</option>
+                    <option>その他（デザイン）</option>
+                <option class='title'>ライティング・記事作成</option>
+                    <option>キャッチフレーズ・コピーライティング</option>
+                    <option>名前募集</option>
+                    <option>ブログ記事作成</option>
+                    <option>レビュー・口コミ</option>
+                    <option>記事・Webコンテンツ作成</option>
+                    <option>文書作成</option>
+                    <option>編集・校正・リライト</option>
+                    <option>セールスコピー・セールスレター</option>
+                    <option>電子書籍制作</option>
+                    <option>メルマガ・DM作成</option>
+                    <option>その他（ライティング）</option>
+                <option class='title'>ネーミング・アイデア</option>
+                    <option>ネーミング募集</option>
+                    <option>キャッチコピー・コピーライティング</option>
+                    <option>企画・プロモアイデア募集</option>
+                    <option>商品企画</option>
+                <option class='title'>翻訳・通訳サービス</option>
+                    <option>英語通訳・英文翻訳</option>
+                    <option>中国語翻訳</option>
+                    <option>翻訳・通訳</option>
+                    <option>出版翻訳</option>
+                    <option>フランス語翻訳</option>
+                    <option>映像翻訳・メディア翻訳</option>
+                    <option>韓国語翻訳</option>
+                    <option>ドイツ語翻訳</option>
+                    <option>タイ語翻訳</option>
+                    <option>スペイン語翻訳</option>
+                    <option>イタリア語翻訳</option>
+                    <option>ポルトガル語翻訳</option>
+                    <option>ロシア語翻訳</option>
+                    <option>同時通訳・電話通訳</option>
+                    <option>アラビア語翻訳</option>
+                    <option>海外コールセンター</option>
+                    <option>タガログ語翻訳</option>
+                <option class='title'>ECサイト・ネットショップ構築</option>
+                    <option>商品登録・商品撮影</option>
+                    <option>ECサイト制作</option>
+                    <option>ECサイトデザイン</option>
+                    <option>ネットショップ運営代行</option>
+                    <option>ネットショップの在庫管理・受注管理</option>
+                <option class='title'>サイト運営・ビジネス</option>
+
+                    <option>リサーチ・分析・解析</option>
+                    <option>ビジネスサポート</option>
+                    <option>企画・広告・PR</option>
+                    <option>Webマーケティング</option>
+                    <option>コンサルティング</option>
+                    
+                <option class='title'>事務・ビジネスサポート・調査</option>
+                    
+                    <option>サイト運営・サポート（経験不問）</option>
+                    <option>ビジネスサポート（経験不問）</option>
+                    <option>かんたん調査</option>
+                    
+                <option class='title'>カンタン作業</option>
+           
+                    <option>質問・アンケート・テスト</option>
+                    <option>データ作成・入力</option>
+                    <option>内職・軽作業</option>
+                    <option>各種代行</option>
+                    <option>写真・動画</option>
+                    <option>データ分類・カテゴリ分け</option>
+                    <option>その他（カンタン作業）</option>
+                    
+                <option class='title'>写真・画像・動画</option>
+
+                    <option>動画作成・動画制作</option>
+                    <option>画像加工</option>
+                    <option>写真撮影</option>
+                    <option>写真加工・写真編集</option>
+                    <option>映像編集・映像制作</option>
+                    <option>映像撮影</option>
+                    <option>Flash制作</option>
+                    
+                <option class='title'>3D-CG制作</option>
+                    
+                    <option>3D-CAD制作・モデリング</option>
+                    <option>建築設計・CAD・パース作成</option>
+                    <option>3Dアニメーション作成</option>
+                    <option>3Dプリンター用データ作成</option>
+        
+                <option class='title'>音楽・音響・BGM</option>
+                    <option>声優・ナレーション制作</option>
+                    <option>作曲・音源・効果音</option>
+                    <option>音声制作</option>
+                    <option>BGM制作</option>
+                <option class='title'>プロジェクト・保守運用メンバー募集</option>
+                
+                    <option>開発（時間単価制）</option>
+                    <option>事務（時間単価制）</option>
+                    <option>ライティング（時間単価制）</option>
+                    <option>デザイン（時間単価制）</option>
+                    
+                <option class='title'>暮らし・社会</option>
+                
+                    <option>ビジネス・財務会計・知財</option>
+                    <option>マネー・ライフプラン</option>
+                    <option>建築・不動産</option>
+                
+
+                </select><br/>
+                ランサーズカテゴリ<select name="カテゴリ", id="serch_word2">
+                
+                    <option class='title'>コンサル・専門職・事務</option>
+                        <option>セールス・ビジネスサポート</option>
+                        <option>資料作成サポート</option>
+                        <option>コンサルティング</option>
+                        <option>その他</option>
+                    <option class='title'>Web制作・Webデザイン</option>
+                        <option>ウェブサイト制作・デザイン</option>
+                        <option>スマートフォン・モバイルサイト制作</option>
+                        <option>バナー・アイコン・ボタン</option>
+                        <option>ECサイト・ネットショップ構築・運用</option>
+                        <option>運営・更新・保守・SNS運用</option>
+                    <option class='title'>デザイン制作</option>
+                        <option>ロゴ・イラスト・キャラクター</option>
+                        <option>印刷物・DTP・その他</option>
+                        <option>POP・シール・メニュー</option>
+                        <option>看板・地図・インフォグラフィック</option>
+                        <option>CD・本</option>
+                        <option>プロダクト・3D</option>
+                    <option class='title'>ライティング・ネーミング</option>
+                        <option>ライティング</option>
+                        <option>ネーミング・コピー</option>
+                        <option>編集・校正</option>
+                    <option class='title'>システム開発・運用</option>
+                        <option>Web・システム開発</option>
+                        <option>スマホアプリ・モバイル開発</option>
+                        <option>アプリケーション開発</option>
+                        <option>運用・管理・保守</option>
+                    <option class='title'>翻訳・通訳サービス</option>
+                        <option>英語翻訳・英文翻訳</option>
+                        <option>中国語翻訳</option>
+                        <option>韓国語翻訳</option>
+                        <option>フランス語翻訳</option>
+                        <option>スペイン語翻訳</option>
+                        <option>ドイツ語翻訳</option>
+                        <option>その他翻訳</option>
+                        <option>映像翻訳・出版翻訳・メディア翻訳</option>
+                        <option>タイ語翻訳</option>
+                        <option>ベトナム語翻訳</option>
+                        <option>ロシア語翻訳</option>
+                        <option>イタリア語翻訳</option>
+                        <option>ポルトガル語翻訳</option>
+                        <option>同時通訳・電話通訳</option>
+                    <option class='title'>写真・動画・ナレーション</option>
+                        <option>動画・写真・画像</option>
+                        <option>漫画・アニメーション・ドラマ</option>
+                        <option>音楽・音源・ナレーション</option>
+                        <option class='title'>営業・マーケティング・企画</option>
+                        <option>Webマーケティング・HP集客</option>
+                        <option>企画・PR</option>
+                        <option>リサーチ・分析・解析</option>
+                        <option>営業</option>
+                        <option>カスタマーサポート</option>
+                    <option class='title'>タスク・作業</option>
+                        <option>データ作成・テキスト入力</option>
+                        <option>レビュー・投稿・アンケート</option>
+                        <option>調査・分析・その他</option>
+                        <option>内職・軽作業・代行</option>
+    
+                    </select><br/>
+            
+            <label for="scales">募集終了案件を除外する(推奨)</label>
+            <input type="checkbox" id="hide" name="hide"><br/>
+
+            <button class="search" id="search">検索</button><br/><br/>
+        </div>
+        <div>
+            <textarea id="result" class="log-view-area"></textarea>
+        </div>
+        <script type="text/javascript" src="./eel.js"></script>
+        <script>
+            search.addEventListener('click', () => {
+                //alert(serch_word.value)
+
+                const checker = document.getElementById("hide");
+                if(checker.checked){
+                    var checkbox = true;
+                }else{
+                    var checkbox = false;
+                }
+
+                eel.main(serch_word1.value,serch_word2.value,csv_name.value,checkbox)
+            })
+
+            eel.expose(view_log_js)
+            function view_log_js(text){
+                result.value += text + "\n"
+            }
+        </script>
+    </body>
+</html>
